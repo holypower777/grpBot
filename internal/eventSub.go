@@ -62,11 +62,11 @@ func (f *Followers) GetSlice(from, to string) ([]*Follower, error) {
 	var endIndex int
 	startFound, endFound := false, false
 	for k, v := range f.Followers {
-		if v.UserLogin == from {
+		if v.UserName == from {
 			startIndex = k
 			startFound = true
 		}
-		if v.UserLogin == to {
+		if v.UserName == to {
 			endIndex = k + 1
 			endFound = true
 			break
